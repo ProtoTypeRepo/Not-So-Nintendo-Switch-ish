@@ -446,6 +446,7 @@
                                     </Style.Triggers>
                                 </Style>
                             </Grid.Style>
+							<MediaElement x:Name="IntroSound" Source="{ThemeFile 'audio/intro.wav'}" LoadedBehavior="Play" UnloadedBehavior="Stop" Volume="1.0" Visibility="Collapsed" />
                             <Viewbox Stretch="Fill">
                                 <Canvas x:Name="AnimIntroCanvas1" Width="1920" Height="1080" Opacity="0">
                                     <Canvas.Resources>
@@ -473,7 +474,7 @@
                                             <DoubleAnimation Storyboard.TargetName="AnimIntroCanvas1" Storyboard.TargetProperty="Height" From="2160" To="2161" BeginTime="{DynamicResource IntroTimespan}" Duration="0:0:2"/>
                                         </Storyboard>
                                     </Canvas.Resources>
-                                    <Border Background="#E60012" Width="1920" Height="1080"/>
+                                    <Border Background="#6488ea" Width="1920" Height="1080"/>
                                     <Grid x:Name="Logo_Left" HorizontalAlignment="Center" VerticalAlignment="Center" Width="1920" Height="1080" Opacity="1" Margin="-75,-100,0,0">
                                         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                                             <Image Stretch="UniformToFill" Source="{ThemeFile 'Images/Logo_Left.png'}" Width="134" Height="275"/>
@@ -481,7 +482,7 @@
                                     </Grid>
                                     <Grid x:Name="Logo_Right" HorizontalAlignment="Center" VerticalAlignment="Center" Width="1920" Height="1080" Opacity="1" Margin="75,-200,0,0">
                                         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                                            <Image Stretch="UniformToFill" Source="{ThemeFile 'Images/Logo_Right.png'}" Width="115" Height="275"/>
+                                            <Image Stretch="UniformToFill" Source="{ThemeFile 'Images/Logo_Right.png'}" Width="134" Height="275"/>
                                         </StackPanel>
                                     </Grid>
                                     <Grid x:Name="Logo_Bottom_1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="1920" Height="1080" Opacity="1" Margin="0,100,0,0">
