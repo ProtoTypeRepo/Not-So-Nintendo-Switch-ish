@@ -42,47 +42,53 @@
                                     <ColumnDefinition Width="100" />
                                 </Grid.ColumnDefinitions>
 
-								<StackPanel Grid.Column="1"
-									HorizontalAlignment="Center"
-									VerticalAlignment="Top"
-									Visibility="{PluginSettings Plugin=ProtoTypeThemes_0c2bbcf9-9363-4c10-a18b-0ce77f02e95d, Path=ProfileWidgetVisibility}">
+<StackPanel Grid.Column="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Visibility="Visible">
 
-								<Border CornerRadius="60"
-									Height="90"
-									Width="90"
-									BorderThickness="3"
-									BorderBrush="#505050"
-									Background="{PluginSettings Plugin=ProtoTypeThemes_0c2bbcf9-9363-4c10-a18b-0ce77f02e95d, Path=ProfileBackgroundBrush}">
+<Border CornerRadius="60"
+        Height="90"
+        Width="90"
+        BorderThickness="3"
+        BorderBrush="#505050"
+        Background="{PluginSettings Plugin=ProtoTypeThemes, Path=ProfileBackgroundBrush}">
 
-									<Image RenderOptions.BitmapScalingMode="Fant"
-									Source="{PluginSettings Plugin=ProtoTypeThemes_0c2bbcf9-9363-4c10-a18b-0ce77f02e95d, Path=SelectedProfileIconPath}"
-									Width="64"
-									Height="64"
-									Stretch="Uniform"
-									HorizontalAlignment="Center"
-									VerticalAlignment="Center"/>
+<Image RenderOptions.BitmapScalingMode="Fant"
+       Source="{PluginSettings Plugin=ProtoTypeThemes, Path=SelectedProfileIconPath}"
+       Width="64"
+       Height="64"
+       Stretch="UniformToFill"
+       HorizontalAlignment="Center"
+       VerticalAlignment="Center">
 
-									<Border.Effect>
-									<DropShadowEffect ShadowDepth="0.5"/>
-									</Border.Effect>
-								</Border>
+    <Image.Clip>
+        <EllipseGeometry Center="32,32"
+                         RadiusX="32"
+                         RadiusY="32"/>
+    </Image.Clip>
 
-								<TextBlock Text="{PluginSettings Plugin=ProtoTypeThemes_0c2bbcf9-9363-4c10-a18b-0ce77f02e95d, Path=ProfileName}"
-								Visibility="{PluginSettings Plugin=ProtoTypeThemes_0c2bbcf9-9363-4c10-a18b-0ce77f02e95d, Path=ProfileNameVisibility}"
-								Foreground="White"
-								FontSize="18"
-								FontWeight="SemiBold"
-								TextAlignment="Center"
-								HorizontalAlignment="Center"
-								Margin="0,6,0,2"/>
+</Image>
 
-								<Image Source="{PluginSettings Plugin=ProtoTypeThemes_0c2bbcf9-9363-4c10-a18b-0ce77f02e95d, Path=SelectedProfileBadgePath}"
-								Visibility="{PluginSettings Plugin=ProtoTypeThemes_0c2bbcf9-9363-4c10-a18b-0ce77f02e95d, Path=ProfileBadgeVisibility}"
-								Width="90"
-								Height="28"
-								Stretch="Uniform"
-								HorizontalAlignment="Center"/>
-								</StackPanel>
+    <Border.Effect>
+        <DropShadowEffect ShadowDepth="0.5"/>
+    </Border.Effect>
+</Border>
+
+    <TextBlock Text="{PluginSettings Plugin=ProtoTypeThemes, Path=ProfileName}"
+               Visibility="Visible"
+               Foreground="White"
+               FontSize="18"
+               FontWeight="SemiBold"
+               TextAlignment="Center"
+               HorizontalAlignment="Center"
+               Margin="0,6,0,2"/>
+	<Image Source="{PluginSettings Plugin=ProtoTypeThemes, Path=SelectedProfileBadgePath}"
+       Width="90"
+       Height="28"
+       Stretch="Uniform"
+       HorizontalAlignment="Center"/>
+</StackPanel>
 
                                 <Grid x:Name="Squares" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50">
                                     <Grid.Style>
